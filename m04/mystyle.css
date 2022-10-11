@@ -1,0 +1,62 @@
+* {
+font-family: Arial, Verdana, sans-serif;
+color: #665544;
+text-align: center;}
+
+body {
+  background-image: url("https://images4.alphacoders.com/106/106826.jpg");
+  width: 90%;
+  margin: 0 auto;}
+
+#content {
+  overflow: auto;}
+
+#nav {
+  background-color: LightBlue;}
+
+h1 {
+   font-family: 'SpaceMeatballRegular';
+   font-weight: normal;
+   font-style: normal;
+}
+
+#feature {
+  background-color: SteelBlue;
+  background-image: url("https://exoplanets.nasa.gov/internal_resources/1806/");
+  background-size:contain;
+  background-position: right;
+  background-repeat:no-repeat;}
+
+.column1 {
+  background-color: CornflowerBlue;}
+
+.column2 {
+  background-color: LightSkyBlue;}
+
+.column3 {
+  background-color: DodgerBlue;}
+
+#footer {
+  background-color: SkyBlue;}
+
+#nav, #feature, #footer {
+  margin: 1%;}
+
+.column1, .column2, .column3 {
+  width: 31.3%;
+  float: left;
+  margin: 1%;}
+
+.column3 {
+  margin-right: 0%;}
+
+li {
+  display: inline;
+  padding: 0.5em;}
+
+#nav, #footer {
+  padding: 0.5em 0;}
+
+#feature, .article {
+  height: 10em;
+  margin-bottom: 1em;}
