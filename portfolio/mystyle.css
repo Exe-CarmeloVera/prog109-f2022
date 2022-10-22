@@ -1,0 +1,55 @@
+* {
+  font-family: Arial, Verdana, sans-serif;
+  color: #665544;
+  text-align: center;
+}
+
+body {
+  background-image: url("https://images.squarespace-cdn.com/content/v1/53c80b1ae4b006756b6ddce4/1607214569963-7DKNELMH8ZBDISHX74N8/LabHimalayasBackEntrance.png");
+  width: 90%;
+  margin: 0 auto;
+}
+
+#content {
+
+}
+
+#nav {
+  background-color: LightSkyBlue;
+}
+
+
+h1, p {
+   font-family: 'CodeNewRomanRegular';
+   font-weight: normal;
+   font-style: normal;
+}
+
+h1 {
+  color: white;
+}
+
+
+#feature {
+  background-color: LightBlue;
+  margin-bottom: 1em;
+}
+
+#footer {
+  background-color: SkyBlue;
+}
+
+
+#nav, #feature, #footer {
+  margin: 1%;
+}
+
+
+li {
+  display: inline;
+  padding: 0.5em;
+}
+
+#nav, #footer {
+  padding: 0.5em 0;
+}
