@@ -35,6 +35,7 @@ h1, p {
 #feature {
   background-color: LightBlue;
   margin-bottom: 1em;
+  padding: 10px;
 }
 
 #footer {
@@ -42,9 +43,23 @@ h1, p {
     text-align: center;
 }
 
+.form {
+  width: 80%;
+  margin: auto;
+}
 
 #nav, #feature, #footer {
   margin: 1%;
+}
+
+label {
+
+}
+
+input, textarea{
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 10px;
 }
 
 
