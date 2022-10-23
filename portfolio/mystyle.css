@@ -14,6 +14,10 @@ body {
   text-align: center;
 }
 
+iframe {
+  border:0px;
+}
+
 .artifact {
   float:right;
   height:70px;
