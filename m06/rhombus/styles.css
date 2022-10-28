@@ -1,0 +1,33 @@
+	#upLeft {
+	    float: left;
+	}
+
+	#downLeft {
+	    float: left;
+	}
+
+	#upRight {
+	    float: left;
+	}
+
+	#downRight {
+	    float: left;
+	}
+
+	#rhombus {
+	    clear: both;
+	    margin-top: 10px;
+	    margin-bottom: 10px;
+	}
+
+	.clear {
+	    clear: both;
+	}
+
+	.space {
+	    color: white;
+	}
+
+	p {
+	    margin: 0px;
+	}
