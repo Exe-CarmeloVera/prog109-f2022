@@ -12,7 +12,10 @@ function ValidateForm() {
     var validZipcode = false;
 
     var letters = /^[A-Za-z]/;
-    var numbers = /^[0-9]+$/;
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var phoneformat = /^[0-9_\-]+$/i;
+    var passwordformat = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+*!=]).*$/;
+
     var errorMessages = ""; //All the error messages are going to stay in this variable
     /**** VALIDATES USERNAME ****
     */
@@ -26,10 +29,15 @@ function ValidateForm() {
     if (myContact.firstname.value.length > 20 ||
         myContact.firstname.value === null ||
         myContact.firstname.value === "" ||
-        !myContact.firstname.value.match(letters))
-        errorMessages += "<p>The firstname must be less than 20 characters and it is required. Only letters are accepted</p>";
+        !myContact.firstname.value.match(letters)) {
+
+        myContact.firstname.focus();
+        errorMessages += "<p>The firstname must be less than 20 characters and it is required. Only letters are accepted.</p>";
+    }
+
     else
         validFirstName = true;
+
 
     /**** VALIDATES LASTNAME **** 
  */
@@ -37,8 +45,12 @@ function ValidateForm() {
     if (myContact.lastname.value.length > 50 ||
         myContact.lastname.value === null ||
         myContact.lastname.value === "" ||
-        !myContact.lastname.value.match(letters))
-        errorMessages += "<p>The lastname must be less than 50 characters and it is required. Only letters are accepted</p>";
+        !myContact.lastname.value.match(letters)){
+
+        myContact.lastname.focus();
+        errorMessages += "<p>The lastname must be less than 50 characters and it is required. Only letters are accepted.</p>";
+    }
+
     else
         validLastName = true;
 
@@ -46,8 +58,13 @@ function ValidateForm() {
 */
     //Required.
     if (myContact.email.value === null ||
-        myContact.email.value === "")
-        errorMessages += "<p>The email is required</p>";
+        myContact.email.value === "" ||
+        !myContact.email.value.match(mailformat)){
+
+        myContact.email.focus();
+        errorMessages += "<p>Email is required. You have entered an invalid email address. </p>";
+    }   
+
     else
         validEmail = true;
 
@@ -57,8 +74,12 @@ function ValidateForm() {
     if (myContact.phone.value.length > 15 ||
         myContact.phone.value === null ||
         myContact.phone.value === "" ||
-        !myContact.phone.value.match(numbers))
-        errorMessages += "<p>The phone number must be less than 15 digits and it is required</p>";
+        !myContact.phone.value.match(phoneformat)){
+
+        myContact.phone.focus();
+        errorMessages += "<p>The phone number must be less than 15 characters and it is required. Only numbers and dashes accepted.</p>";
+    }
+
     else
         validPhoneNumber = true;
 
@@ -67,8 +88,12 @@ function ValidateForm() {
     //Required: Maximun 12 characters.
     if (myContact.username.value.length > 12 ||
         myContact.username.value === null ||
-        myContact.username.value === "")
-        errorMessages += "<p>The username must be less than 12 characters and it is required</p>";
+        myContact.username.value === ""){
+
+        myContact.username.focus();
+        errorMessages += "<p>The username must be less than 12 characters and it is required.</p>";
+    }
+
     else
         validUsername = true;
 
@@ -78,8 +103,13 @@ function ValidateForm() {
     //Required.  Maximum 7 characters.
     if (myContact.password.value.length > 7 ||
         myContact.password.value === null ||
-        myContact.password.value === "")
-        errorMessages += "<p>The password must be less than 7 characters and it is required</p>";
+        myContact.password.value === "" ||
+        !myContact.password.value.match(passwordformat)){
+
+        myContact.password.focus();
+        errorMessages += "<p>The password must be less than 7 characters and it is required. Password requires 1 upper-case, 1 lower-case, 1 numeric, 1 special character.</p>";
+    }
+
     else
         validPassword = true;
 
@@ -88,8 +118,12 @@ function ValidateForm() {
 */
     //Required.
     if (myContact.address.value === null ||
-        myContact.address.value === "")
-        errorMessages += "<p>The address is required</p>";
+        myContact.address.value === ""){
+
+        myContact.firstname.focus();
+        errorMessages += "<p>The address is required.</p>";
+    }
+
     else
         validAddress = true;
 
@@ -97,8 +131,12 @@ function ValidateForm() {
 */
     //Required.
     if (myContact.city.value === null ||
-        myContact.city.value === "")
-        errorMessages += "<p>The city is required</p>";
+        myContact.city.value === ""){
+
+        myContact.firstname.focus();
+        errorMessages += "<p>The city is required.</p>";
+    }
+
     else
         validCity = true;
 
@@ -106,29 +144,42 @@ function ValidateForm() {
 */
     //Required.
     if (myContact.state.value === null ||
-        myContact.state.value === "")
-        errorMessages += "<p>The state is required</p>";
+        myContact.state.value === ""){
+
+        myContact.firstname.focus();    
+        errorMessages += "<p>The state is required.</p>";
+    }
+
     else
         validState = true;
 
     /**** VALIDATES COUNTRY **** 
 */
     //Required.
-    if (myContact.countries.value === null ||
-        myContact.countries.value === "")
-        errorMessages += "<p>The country is required</p>";
+    if (myContact.country.value === null ||
+        myContact.country.value === ""){
+
+        myContact.firstname.focus();
+        errorMessages += "<p>The country is required.</p>";
+    }
+
     else
         validCountry = true;
 
-    /**** VALIDATES ZIPCODE **** 
+    /**** VALIDATES ZIPCODE ****
 */
-    //Required.
-    if (myContact.zipcode.value === null ||
-        myContact.zipcode.value === "")
-        errorMessages += "<p>The zipcode is required</p>";
+
+
+    /****VALIDATES ZIPCODE ONLY IF THE COUNTRY IS USA */
+    if (myContact.country.value === "USA" &&
+        myContact.zipcode.value.length !== 5){
+
+        myContact.firstname.focus();
+        errorMessages += "<p>The zipcode must have 5 digits.</p>";
+    }
+
     else
         validZipcode = true;
-
 
     document.getElementById("errorMessages").innerHTML = errorMessages;
     return (validFirstName && validLastName && validEmail && validPhoneNumber && validUsername && validPassword &&
