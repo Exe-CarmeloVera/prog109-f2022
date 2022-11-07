@@ -15,7 +15,6 @@ function ValidateForm() {
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     var phoneformat = /^[0-9_\-]+$/i;
     var passwordformat = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+*!=]).*$/;
-
     var errorMessages = ""; //All the error messages are going to stay in this variable
     /**** VALIDATES USERNAME ****
     */
