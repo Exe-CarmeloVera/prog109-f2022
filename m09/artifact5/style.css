@@ -1,0 +1,9 @@
+body {
+    text-align: center;
+}
+
+#slideshow {
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+}
