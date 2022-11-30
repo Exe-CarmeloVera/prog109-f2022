@@ -76,3 +76,10 @@ input, textarea{
 #errorMessages {
   color: red;
 }
+
+#thanksgif {
+  background-image:url(https://media.tenor.com/pyGugHcm4XcAAAAC/michael-scott-the-office.gif);
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 300px;
+}
