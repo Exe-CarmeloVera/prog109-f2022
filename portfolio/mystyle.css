@@ -72,3 +72,7 @@ input, textarea{
 #nav, #footer {
   padding: 0.5em 0;
 }
+
+#errorMessages {
+  color: red;
+}

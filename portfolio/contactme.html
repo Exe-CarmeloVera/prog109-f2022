@@ -1,66 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="M04 Assignment">
-    <meta name="keywords" content="HTML, CSS">
-    <meta name="author" content="Exe - Carmelo Vera">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact me</title>
-    <link rel="stylesheet" type="text/css" href="mystyle.css">
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/code-new-roman" type="text/css">
-  </head>
-  <body>
-    <div id="header">
-      <h1>Carmelo Vera - Portfolio</h1>
-      <div id="nav">
-        <ul>
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="about.html">About</a>
-          </li>
-          <li>
-            <a href="coursework.html">Coursework</a>
-          </li>
-          <li>
-            <a href="artifacts.html">Artifacts</a>
-          </li>
-          <li>
-            <a href="moduleassignments.html">Module Assignments</a>
-          </li>
-          <li>
-            <a href="contactme.html">Contact me</a>
-          <li>
-          <li>
-            <a href="creativepage.html">Creative Page</a>
-          <li>
-        </ul>
-      </div>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="M04 Assignment">
+  <meta name="keywords" content="HTML, CSS">
+  <meta name="author" content="Exe - Carmelo Vera">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact me</title>
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/code-new-roman" type="text/css">
+  <script src="mystyle.js"></script>
+</head>
+
+<body>
+  <div id="header">
+    <h1>Carmelo Vera - Portfolio</h1>
+    <div id="nav">
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+        <li>
+          <a href="coursework.html">Coursework</a>
+        </li>
+        <li>
+          <a href="artifacts.html">Artifacts</a>
+        </li>
+        <li>
+          <a href="moduleassignments.html">Module Assignments</a>
+        </li>
+        <li>
+          <a href="contactme.html">Contact me</a>
+        <li>
+        <li>
+          <a href="creativepage.html">Creative Page</a>
+        <li>
+      </ul>
     </div>
-    <div id="content">
-      <div id="feature">
-        <h2>Contact me:</h2>
-        <div class="form">
-          <h4>User information</h4>
-        <form action="thankyou.html" method="get">
-          <label for="fullname">Name</label><br>
-          <input type="text" name="fullname" id="fullname" required="required">
+  </div>
+  <div id="content">
+    <div id="feature">
+      <div id="errorMessages"></div>
+
+      <h2>Contact me:</h2>
+      <div class="form">
+        <h4>User information</h4>
+
+        <form action="thankyou.html" method="get" name="myContact" onsubmit="return ValidateForm()">
+          <label for="fullname">Enter FullName</label><br>
+          <input type="text" id="fullname">
           <br>
-          <label for="email">Email</label><br>
-          <input type="text" name="email" id="email" required="required">
+
+          <label for="email">Enter email</label><br>
+          <input type="text" id="email">
           <br>
+
           <label for="comments">Comments</label><br>
-          <textarea name="comments" id="comments" required="required" placeholder="Enter your comments..."></textarea>
+          <textarea name="comments" id="commentbox" rows="4" cols="50"></textarea>
           <br>
           <input type="submit" value="Submit">
         </form>
-        </div>
       </div>
     </div>
-    <div id="footer">
-      <p>&copy; Copyright 2011</p>
-    </div>
-  </body>
+  </div>
+  <div id="footer">
+    <p>&copy; Copyright 2011</p>
+  </div>
+</body>
+
 </html>
