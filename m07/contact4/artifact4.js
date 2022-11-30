@@ -10,7 +10,6 @@ function ValidateForm() {
     var validState = false;
     var validCountry = false;
     var validZipcode = false;
-
     var letters = /^[A-Za-z]/;
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     var phoneformat = /^[0-9_\-]+$/i;
