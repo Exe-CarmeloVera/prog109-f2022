@@ -1,6 +1,6 @@
 * {
   font-family: Arial, Verdana, sans-serif;
-  color: #665544;
+  color: #ffffff;
 }
 
 body {
@@ -10,7 +10,7 @@ body {
 }
 
 #nav {
-  background-color: LightSkyBlue;
+  background-color: #55535b;
   text-align: center;
 }
 
@@ -31,19 +31,19 @@ h1, p {
 }
 
 #header h1 {
-  color: white;
+  color: rgb(255, 255, 255);
     text-align: center;
 }
 
 
 #feature {
-  background-color: LightBlue;
+  background-color: #6a8aa1;
   margin-bottom: 1em;
-  padding: 10px;
+  padding: 60px;
 }
 
 #footer {
-  background-color: SkyBlue;
+  background-color: #94745a;
     text-align: center;
 }
 
