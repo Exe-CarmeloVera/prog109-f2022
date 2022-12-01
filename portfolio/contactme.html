@@ -48,19 +48,19 @@
 
       <h2>Contact me:</h2>
       <div class="form">
-        <h4>User information</h4>
+        <h3>User information</h3>
 
         <form action="thankyou.html" method="get" name="myContact" onsubmit="return ValidateForm()">
-          <label for="fullname">Enter FullName</label><br>
-          <input type="text" id="fullname">
+          <label for="fullname">Enter Fullname</label><br>
+          <input type="text" name="fullname" id="fullname">
           <br>
 
           <label for="email">Enter email</label><br>
-          <input type="text" id="email">
+          <input type="text" name="email" id="email">
           <br>
 
-          <label for="comments">Comments</label><br>
-          <textarea id="commentbox" rows="4" cols="50"></textarea>
+          <label for="commentbox">Comments</label><br>
+          <textarea id="commentbox" name="commentbox" rows="4" cols="50"></textarea>
           <br>
           <input type="submit" value="Submit">
         </form>
@@ -71,5 +71,4 @@
     <p>&copy; Copyright 2011</p>
   </div>
 </body>
-
 </html>

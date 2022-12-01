@@ -10,7 +10,7 @@ body {
 }
 
 #nav {
-  background-color: #55535b;
+  background-color: #15529d;
   text-align: center;
 }
 
@@ -37,13 +37,13 @@ h1, p {
 
 
 #feature {
-  background-color: #6a8aa1;
+  background-color: #112e51;
   margin-bottom: 1em;
   padding: 60px;
 }
 
 #footer {
-  background-color: #94745a;
+  background-color: #18548c;
     text-align: center;
 }
 
@@ -61,6 +61,7 @@ input, textarea{
   width: 100%;
   max-width: 100%;
   margin-bottom: 10px;
+  color:black;
 }
 
 
