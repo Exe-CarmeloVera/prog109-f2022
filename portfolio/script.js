@@ -39,3 +39,9 @@ function ValidateForm() {
     document.getElementById("errorMessages").innerHTML = errorMessages;
     return (validFullName && validEmail && validComment);
 }
+
+addEventListener("load", function (event) {
+    var d = new Date();
+    document.getElementById("footer").innerHTML = d;
+});
+
